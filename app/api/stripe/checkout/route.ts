@@ -2,6 +2,8 @@ import { NextRequest, NextResponse } from 'next/server';
 import { stripe } from '@/lib/stripe';
 import { PLANS } from '@/types';
 
+export const dynamic = 'force-dynamic';
+
 export async function POST(req: NextRequest) {
   // Stripe 未設定時はフレンドリーなメッセージを返す
   const stripeKey = process.env.STRIPE_SECRET_KEY ?? '';

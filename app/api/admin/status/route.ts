@@ -2,6 +2,9 @@ import { NextRequest, NextResponse } from 'next/server';
 import { createClient } from '@/lib/supabase/server';
 import { supabaseAdmin } from '@/lib/supabase/admin';
 
+// 動的ルート（ビルド時に静的解析しない）
+export const dynamic = 'force-dynamic';
+
 // 管理者チェックヘルパー
 async function getAdminTellerId(req: NextRequest): Promise<string | null> {
   const supabase = createClient();

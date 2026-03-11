@@ -5,6 +5,7 @@ import type Stripe from 'stripe';
 
 // Next.js App RouterのbodyParserを無効化（Stripeのwebhook検証に必要）
 export const runtime = 'nodejs';
+export const dynamic = 'force-dynamic';
 
 export async function POST(req: NextRequest) {
   const body = await req.text();
