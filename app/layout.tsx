@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="ja">
-      <body className="bg-deep text-gold-pale font-noto antialiased">
+      <body style={{ background: 'var(--deep)', color: 'var(--gold-pale)', fontFamily: "'Noto Serif JP', serif", WebkitFontSmoothing: 'antialiased' }}>
         {children}
       </body>
     </html>

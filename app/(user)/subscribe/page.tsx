@@ -41,16 +41,16 @@ function SubscribeContent() {
 
   if (loading) {
     return (
-      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#0d0a1a' }}>
         <AuroraBg />
-        <div style={{ position: 'relative', zIndex: 1, fontSize: 36, filter: 'drop-shadow(0 0 20px rgba(201,168,76,0.6))' }}>✦</div>
+        <div style={{ position: 'relative', zIndex: 1, fontSize: 36, color: '#c9a84c', filter: 'drop-shadow(0 0 20px rgba(201,168,76,0.6))' }}>✦</div>
       </div>
     );
   }
 
   if (success) {
     return (
-      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem' }}>
+      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', padding: '1.5rem', background: '#0d0a1a' }}>
         <AuroraBg />
         <div style={{ position: 'relative', zIndex: 1, textAlign: 'center', maxWidth: 480 }}>
           <div style={{ fontSize: 64, marginBottom: 24 }}>✨</div>
@@ -71,7 +71,7 @@ function SubscribeContent() {
   }
 
   return (
-    <div style={{ minHeight: '100vh', position: 'relative' }}>
+    <div style={{ minHeight: '100vh', position: 'relative', background: '#06030f' }}>
       <AuroraBg />
       <SubscriptionPanel profile={profile} onClose={() => router.push('/tellers')} />
     </div>
@@ -81,8 +81,8 @@ function SubscribeContent() {
 export default function SubscribePage() {
   return (
     <Suspense fallback={
-      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: 'var(--void)' }}>
-        <div style={{ fontSize: 36, filter: 'drop-shadow(0 0 20px rgba(201,168,76,0.6))' }}>✦</div>
+      <div style={{ height: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', background: '#06030f' }}>
+        <div style={{ fontSize: 36, color: '#c9a84c', filter: 'drop-shadow(0 0 20px rgba(201,168,76,0.6))' }}>✦</div>
       </div>
     }>
       <SubscribeContent />
